@@ -1,0 +1,250 @@
+.foxybdrp-2-column-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    --foxybdrp-right-width: 280px;
+}
+
+    .foxybdrp-2-column-container > div:nth-child(1) {
+        width: calc(100% - var(--foxybdrp-right-width));
+    }
+
+    .foxybdrp-2-column-container > div:nth-child(2) {
+        width: var(--foxybdrp-right-width);
+    }
+
+.foxybdrp-page-panel {
+    margin-bottom: 16px;
+}
+
+#foxybdrp-post-title {
+    margin: 0px;
+    width: 100%;
+    border: 1px solid var(--foxybdr-input-br-color);
+    border-radius: 4px;
+    padding: 8px;
+    background-color: var(--foxybdr-input-bg-color);
+    color: var(--foxybdr-input-t-color);
+    font-size: 16px;
+    line-height: 1.0;
+    outline: none;
+}
+
+.foxybdrp-variation {
+    margin: 0px 0px 8px 0px;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    padding: 16px;
+    background-color: #ffffff;
+}
+
+.foxybdrp-variation.foxybdrp-validation-error {
+    border-color: #ff0000;
+    background-color: #fff0f0;
+}
+
+    .foxybdrp-variation .foxybdrp-main-panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .foxybdrp-variation .foxybdrp-main-panel > div > * {
+            vertical-align: middle;
+        }
+
+        .foxybdrp-variation .foxybdrp-main-panel > div:nth-child(1) > span {
+            margin-right: 4px;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .foxybdrp-variation .foxybdrp-main-panel > div:nth-child(1) > select {
+            width: 100px;
+            border-radius: 4px;
+            padding: 8px;
+            font-size: 14px;
+            line-height: 1.0;
+        }
+
+        .foxybdrp-weight-select {
+            margin-right: 20px;
+        }
+
+        .foxybdrp-style-select {
+            margin-right: 40px;
+        }
+
+        .foxybdrp-variation .foxybdrp-main-panel > div:nth-child(1) > button {
+            border: 1px solid var(--foxybdr-input-br-color);
+            border-radius: 4px;
+            padding: 6px 16px 4px 24px;
+            background-color: var(--foxybdr-input-bg-color);
+            color: var(--foxybdr-input-t-color);
+            font-size: 14px;
+            line-height: 1.0;
+            cursor: pointer;
+            transition: all 0.2s linear;
+        }
+
+        .foxybdrp-variation .foxybdrp-main-panel > div:nth-child(1) > button:hover {
+            color: var(--foxybdr-wp-button-color);
+        }
+
+            .foxybdrp-variation .foxybdrp-main-panel > div:nth-child(1) > button > span:nth-child(2) {
+                position: relative;
+                top: 2px;
+                font-size: 14px;
+                line-height: 1.0;
+                vertical-align: middle;
+            }
+
+        .foxybdrp-variation .foxybdrp-main-panel > div:nth-child(2) > span {
+            position: relative;
+            top: -4px;
+            right: -4px;
+            color: #808080;
+            font-size: 20px;
+            line-height: 1.0;
+            cursor: pointer;
+            transition: all 0.2s linear;
+        }
+
+        .foxybdrp-variation .foxybdrp-main-panel > div:nth-child(2) > span:hover {
+            color: #000000;
+        }
+
+    .foxybdrp-variation .foxybdrp-files-panel {
+        display: none;
+        padding: 16px 16px 0px 16px;
+    }
+
+    .foxybdrp-variation.foxybdrp-open .foxybdrp-files-panel {
+        display: block;
+    }
+
+        .foxybdrp-variation .foxybdrp-files-panel > span {
+            color: #808080;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.0;
+        }
+
+        .foxybdrp-file-panel {
+            display: flex;
+            align-items: center;
+            margin: 8px 0px 0px 0px;
+            border-radius: 4px;
+            padding: 16px;
+            background-color: #f0f0f0;
+            --foxybdrp-panel-left-width: 120px;
+            --foxybdrp-panel-right-width: 100px;
+        }
+
+            .foxybdrp-file-panel > div:nth-child(1) {
+                width: var(--foxybdrp-panel-left-width);
+            }
+
+                .foxybdrp-files-panel .foxybdrp-file-panel > div:nth-child(1) > span {
+                    color: #808080;
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+
+                .foxybdrp-files-panel .foxybdrp-file-panel.foxybdrp-uploaded > div:nth-child(1) > span {
+                    color: inherit;
+                }
+
+            .foxybdrp-file-panel > div:nth-child(2) {
+                width: calc(100% - var(--foxybdrp-panel-left-width) - var(--foxybdrp-panel-right-width));
+                padding-right: 16px;
+            }
+
+                .foxybdrp-files-panel .foxybdrp-file-panel > div:nth-child(2) > input {
+                    width: 100%;
+                    border: 1px solid var(--foxybdr-input-bg-color);
+                    border-radius: 4px;
+                    padding: 8px;
+                    background-color: var(--foxybdr-input-bg-color);
+                    color: var(--foxybdr-input-t-color);
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 1.0;
+                }
+
+                .foxybdrp-files-panel .foxybdrp-file-panel.foxybdrp-uploaded > div:nth-child(2) > input {
+                    border: 1px solid var(--foxybdr-input-br-color);
+                }
+
+            .foxybdrp-file-panel > div:nth-child(3) {
+                width: var(--foxybdrp-panel-right-width);
+            }
+
+                .foxybdrp-files-panel .foxybdrp-file-panel > div:nth-child(3) > button {
+                    width: 100%;
+                    border-width: 0px;
+                    border-radius: 4px;
+                    padding: 11px 0px;
+                    background-color: var(--foxybdr-button-bg-color);
+                    color: var(--foxybdr-button-t-color);
+                    font-size: 14px;
+                    line-height: 1.0;
+                    cursor: pointer;
+                    transition: all 0.2s linear;
+                }
+
+                .foxybdrp-files-panel .foxybdrp-file-panel > div:nth-child(3) > button:hover {
+                    background-color: var(--foxybdr-button-bg-color-h);
+                }
+
+                .foxybdrp-files-panel .foxybdrp-file-panel > div:nth-child(3) > button.foxybdrp-clear {
+                    display: none;
+                    border: 1px solid var(--foxybdr-input-br-color);
+                    padding: 10px 0px;
+                    background-color: var(--foxybdr-input-bg-color);
+                    color: var(--foxybdr-input-br-color);
+                }
+
+                .foxybdrp-files-panel .foxybdrp-file-panel > div:nth-child(3) > button.foxybdrp-clear:hover {
+                    border-color: var(--foxybdr-wp-button-color);
+                    color: var(--foxybdr-wp-button-color);
+                }
+
+                .foxybdrp-files-panel .foxybdrp-file-panel.foxybdrp-uploaded > div:nth-child(3) > button:not(.foxybdrp-clear) {
+                    display: none;
+                }
+
+                .foxybdrp-files-panel .foxybdrp-file-panel.foxybdrp-uploaded > div:nth-child(3) > button.foxybdrp-clear {
+                    display: inline-block;
+                }
+
+#foxybdrp-add-variation-button {
+    margin-top: 8px;
+    border-width: 0px;
+    border-radius: 4px;
+    padding: 12px 20px;
+    background-color: var(--foxybdr-button-bg-color);
+    color: var(--foxybdr-button-t-color);
+    font-size: 14px;
+    line-height: 1.0;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+#foxybdrp-add-variation-button:hover {
+    background-color: var(--foxybdr-button-bg-color-h);
+}
+
+    #foxybdrp-add-variation-button .dashicons {
+        position: relative;
+        top: 3px;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+
+#foxybdrp-save-button {
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 14px;
+    line-height: 1.0;
+}
