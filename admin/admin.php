@@ -6,6 +6,7 @@ if (!defined('ABSPATH'))
     exit;
 
 require_once FOXYBUILDERPRO_PLUGIN_PATH . '/admin/menu/custom-fonts.php';
+require_once FOXYBUILDERPRO_PLUGIN_PATH . '/admin/menu/custom-icons.php';
 
 class Admin
 {
@@ -30,6 +31,7 @@ class Admin
         add_action('foxybdr_admin_menu', [ $this, 'action_foxybdrp_menu' ]);
 
         \FoxyBuilderPro\Admin\Menu\CustomFonts::instance()->init();
+        \FoxyBuilderPro\Admin\Menu\CustomIcons::instance()->init();
     }
 
     public function action_foxybdrp_menu($after_page_name)
@@ -38,6 +40,7 @@ class Admin
         {
             case 'foxybuilder':
                 \FoxyBuilderPro\Admin\Menu\CustomFonts::instance()->admin_menu();
+                \FoxyBuilderPro\Admin\Menu\CustomIcons::instance()->admin_menu();
                 break;
         }
     }

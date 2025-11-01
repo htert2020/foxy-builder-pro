@@ -47,6 +47,11 @@ class Main
             'rewrite' => false,
         ]);
 
+        register_post_type('foxybdrp_icons', [
+            'public' => false,
+            'rewrite' => false,
+        ]);
+
         if (is_admin())
         {
             require_once FOXYBUILDERPRO_PLUGIN_PATH . '/admin/admin.php';

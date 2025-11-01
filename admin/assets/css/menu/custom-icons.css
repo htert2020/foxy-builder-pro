@@ -1,0 +1,37 @@
+.foxybdrp-icon-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+    .foxybdrp-icon-preview i {
+        font-size: 32px;
+        line-height: 100%;
+    }
+
+#foxybdrp-add-custom-icon-button {
+    display: inline-block;
+    margin-top: 32px;
+    border-width: 0px;
+    border-radius: 4px;
+    padding: 12px 20px;
+    background-color: var(--foxybdr-button-bg-color);
+    color: var(--foxybdr-button-t-color);
+    font-size: 14px;
+    line-height: 1.0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+#foxybdrp-add-custom-icon-button:hover {
+    background-color: var(--foxybdr-button-bg-color-h);
+}
+
+    #foxybdrp-add-custom-icon-button .dashicons {
+        position: relative;
+        top: 3px;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+

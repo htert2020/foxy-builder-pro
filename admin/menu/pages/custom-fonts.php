@@ -103,6 +103,13 @@ class ThePage
     {
         $id = (int)\FoxyBuilder\Includes\Security::sanitize_request($_POST, 'foxybdr-id');
 
+        $uploadDir = wp_upload_dir();
+        $fontsPath = $uploadDir['basedir'] . '/foxy-builder-pro/fonts';
+        $fontPathAndFile = $fontsPath . "/font-{$id}.css";
+
+        if (is_file($fontPathAndFile))
+            unlink($fontPathAndFile);
+
         $post = wp_delete_post($id);
 
         if ($post !== null && $post !== false)
@@ -140,7 +147,7 @@ ThePage::instance()->init();
 
 <div class="foxybdr-admin-page">
 
-    <h1>Custom Fonts</h1>
+    <h1><?php echo esc_html__('Custom Fonts', 'foxy-builder-pro'); ?></h1>
 
     <?php \FoxyBuilder\Admin\Includes\Notice::instance()->print_output_html(); ?>
 

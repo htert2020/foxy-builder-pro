@@ -346,7 +346,7 @@ ThePage::instance()->init();
 
 <div class="foxybdr-admin-page">
 
-    <h1>Add Custom Font</h1>
+    <h1><?php echo ThePage::instance()->form_id_str === '' ? esc_html__('Add Custom Font', 'foxy-builder-pro') : esc_html__('Edit Custom Font', 'foxy-builder-pro'); ?></h1>
 
     <?php \FoxyBuilder\Admin\Includes\Notice::instance()->print_output_html(); ?>
 
